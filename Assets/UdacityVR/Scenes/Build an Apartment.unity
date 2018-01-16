@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1850291215}
-  m_IndirectSpecularColor: {r: 0.6326849, g: 0.62614775, b: 0.63746876, a: 1}
+  m_IndirectSpecularColor: {r: 0.6336064, g: 0.6262417, b: 0.63612986, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -88,7 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 6bca7a078c9a44c03abfb5ccc522f724,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -146,7 +147,7 @@ Transform:
   - {fileID: 221183621}
   - {fileID: 703596189}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &10414983 stripped
 Transform:
@@ -164,7 +165,6 @@ GameObject:
   - component: {fileID: 32399105}
   - component: {fileID: 32399104}
   - component: {fileID: 32399103}
-  - component: {fileID: 32399107}
   - component: {fileID: 32399108}
   m_Layer: 0
   m_Name: Camera
@@ -228,26 +228,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32399102}
-  m_LocalRotation: {x: 0, y: 0.45787388, z: 0, w: 0.88901716}
-  m_LocalPosition: {x: -1.1, y: 1.355, z: -0.02}
+  m_LocalRotation: {x: -0, y: 0.45787388, z: -0, w: 0.88901716}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 998079272}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 54.5, z: 0}
---- !u!114 &32399107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 32399102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25417d8bf1f59504ebb38891f9cc4c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1617958683}
-  triggerName: ToggleGlobeRotation
 --- !u!82 &32399108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1084,6 +1071,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43820dfa3f1fb8946b779fd45e64c67b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &998079270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 177758, guid: cb50b25f8b2ff425ab0d64fd8ed0460a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 998079272}
+  - component: {fileID: 998079271}
+  m_Layer: 0
+  m_Name: GvrEditorEmulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &998079271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000013210091632, guid: cb50b25f8b2ff425ab0d64fd8ed0460a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998079270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc55807ba71904e3ea49d7c61244c5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &998079272
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 498412, guid: cb50b25f8b2ff425ab0d64fd8ed0460a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998079270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95, y: 1.56, z: -0.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 32399106}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1008672158
 Prefab:
   m_ObjectHideFlags: 0
@@ -1264,7 +1293,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.591
+      value: -6.002
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1272,7 +1301,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.649
+      value: 3.635
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1805,7 +1834,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.044
+      value: -5.375
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1813,7 +1842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.734
+      value: 4.887
       objectReference: {fileID: 0}
     - target: {fileID: 4000012122602496, guid: 06cfaeea83d07ea4dbfdd24b15f48bff, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1875,7 +1904,7 @@ Transform:
   - {fileID: 587043886}
   - {fileID: 2030738060}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1504019825
 Prefab:
@@ -2044,6 +2073,7 @@ GameObject:
   - component: {fileID: 1617958680}
   - component: {fileID: 1617958679}
   - component: {fileID: 1617958683}
+  - component: {fileID: 1617958684}
   m_Layer: 0
   m_Name: Globe
   m_TagString: Untagged
@@ -2134,6 +2164,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1617958684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1617958678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25417d8bf1f59504ebb38891f9cc4c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1617958683}
+  triggerName: ToggleGlobeRotation
 --- !u!1001 &1634287768
 Prefab:
   m_ObjectHideFlags: 0
@@ -2636,7 +2679,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013916337898, guid: 0471ff042c068cf41b5f6e4cf13341f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.439008
+      value: -4.497
       objectReference: {fileID: 0}
     - target: {fileID: 4000013916337898, guid: 0471ff042c068cf41b5f6e4cf13341f7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2644,7 +2687,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013916337898, guid: 0471ff042c068cf41b5f6e4cf13341f7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.306574
+      value: 6.336
       objectReference: {fileID: 0}
     - target: {fileID: 4000013916337898, guid: 0471ff042c068cf41b5f6e4cf13341f7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2876,5 +2919,5 @@ Transform:
   - {fileID: 785576795}
   - {fileID: 1008672159}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
